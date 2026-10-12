@@ -96,7 +96,6 @@ export const projectsContent = {
       text:
         "This project was built around a real travel agency use case: showcasing travel packages, managing customer interactions, and connecting the booking experience with backend-driven admin and payment flows.",
       tags: ["Paysera", "i18n", "Analytics", "Admin Panel"],
-      link: "https://frontend-koradius.vercel.app/lt",
       github: "https://github.com/FaustasN/frontend_koradius",
     },
     {
@@ -108,6 +107,16 @@ export const projectsContent = {
       tags: ["Time Slot Booking", "Analytics", "Admin Panel"],
       link: "https://www.autovaldika.lt/",
       github: "https://github.com/FaustasN/grz",
+    },
+    {
+      title: "Transgarant Logistics Website",
+      role: "Frontend implementation",
+      stack: "Next.js • React • Tailwind CSS • GSAP",
+      text:
+        "An upgraded multilingual logistics landing page with a refreshed layout and clearer structure.",
+      tags: ["Multilingual", "Nodemailer", "Analytics", "Responsive Design"],
+      link: "https://www.transgarant.lt/",
+      github: "https://github.com/FaustasN/transgarant",
     },
   ],
 };

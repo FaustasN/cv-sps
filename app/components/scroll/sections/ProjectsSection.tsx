@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { Github } from "lucide-react";
+import { Github, Link as LinkIcon } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import SectionShell from "../../SectionShell";
 import { projectsContent } from "../data/content";
@@ -97,6 +97,24 @@ export default function ProjectsSection() {
                     <Github aria-hidden="true" className="size-4" />
                     GitHub
                   </a>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${project.title} website`}
+                      onClick={() =>
+                        trackEvent("project_link_click", {
+                          project_index: index + 1,
+                          project_title: project.title,
+                        })
+                      }
+                      className="ml-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-medium text-slate-950 shadow-sm transition duration-200 hover:bg-slate-100 active:scale-[0.99] md:translate-y-2 md:opacity-0 md:group-hover/meta:translate-y-0 md:group-hover/meta:opacity-100"
+                    >
+                      <LinkIcon aria-hidden="true" className="size-4" />
+                      Link
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
